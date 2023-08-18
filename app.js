@@ -87,7 +87,7 @@ app.post("/", function (req, res) {
     from: "it.160320737020@gmail.com",
     to: email,
     subject: "Confirmation of Details",
-    text: `Dear Sir,
+    text: `Dear Customer,
 
   This is an email to confirm the details you provided for monitoring the price. We appreciate your interest and look forward to your participation.
 
@@ -137,6 +137,7 @@ app.post("/dbs", function (req, res) {
     Email: req.body.scEmail,
     minPrice:req.body.scMinPrice,
     maxPrice:req.body.scMaxPrice,
+    noofdays: req.body.duration,
   });
 
   posting.save();
@@ -156,7 +157,7 @@ app.post("/dbs", function (req, res) {
     from: "it.160320737020@gmail.com",
     to: email,
     subject: "Confirmation of Details",
-    text: `Dear Sir,
+    text: `Dear Customer,
 
   This is an email to confirm the details you provided for monitoring the price. We appreciate your interest and look forward to your participation.
 
